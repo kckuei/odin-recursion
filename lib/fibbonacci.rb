@@ -1,7 +1,3 @@
-# Fibonacci solution, counting from 1:
-# f(1) f(2) f(3) f(4) f(5) f(6) f(7) f(8)
-#  0,   1,   1,   2,   3,   5,   8,   13...
-
 def fibs(num, result = [0, 1])
   (2..num - 1).each { |i| result << result[i - 1] + result[i - 2] }
   result
