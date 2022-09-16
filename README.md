@@ -32,11 +32,11 @@ p fibs_rec(8)   # => [0, 1, 1, 2, 3, 5, 8, 13]
 ```
 
 ### Merge Sort
-The algorithm works by using a divide and conquer approach. Given an array, the array is sub-divided repeatedly into halves until each sub-array is precisely one element. The process can be envisioned as a branching tree. 
+The algorithm works by using a divide and conquer approach. Given an array, the array is sub-divided repeatedly into `left` and `right` halves until each sub-array is precisely *one element*. The process can be envisioned as a *branching tree*. 
 
 Once all sub-arrays are of length 1, the individual sub-arrays (tip of the tree) are then repeatedly merged/coalesced into new larger *sorted* sub-arrays.
 
-In the code implementation, the first while loop is used to compare elements one-by-one from the left and right arrays. Once all elements from either the left or right arrays have been exhausted, it is no longer necessary to compare the two. Since both left and right halves are already sorted, the remaining elements are garunteed to be larger, and thus only need to be added to the return array. 
+In the code implementation, the first `while` loop is used to compare elements one-by-one from the `left` and `right` arrays. Once all elements from either the `left` or `right` arrays have been exhausted, it is no longer necessary to compare the two. Since both `left` and `right` halves are already sorted, the remaining elements are guaranteed to be larger, and thus only need to be appended to the return array. 
 
 A detailed example and sketch is shown below. Refer to the file `detail` for example logs during the divide and merge sort steps.
 ![Merge Sort Example](./assets/merge-sort.png)
