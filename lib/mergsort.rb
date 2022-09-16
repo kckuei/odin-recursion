@@ -6,10 +6,14 @@ def merge_sort(arr)
   left = arr[0..mid - 1]
   right = arr[mid..]
 
+  # p mid, left, right
+
   merge_sort(left)
   merge_sort(right)
 
   merge(arr, left, right)
+
+  # p arr
 end
 
 def merge(arr, left, right)
